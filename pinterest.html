@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Jenterest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+    <!-- Panggil CSS Eksternal -->
+    <link rel="stylesheet" href="pinterest.css">
+</head>
+<body class="bg-white text-gray-900">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <nav class="flex flex-col items-center py-6 space-y-8 w-16 border-r border-gray-200">
+            <button class="text-blue-600 text-3xl font-bold">J</button>
+            <button class="text-black text-xl"><i class="fas fa-inbox"></i></button>
+            <button class="text-black text-xl"><i class="fas fa-compass"></i></button>
+            <button class="text-black text-xl"><i class="fas fa-plus"></i></button>
+            <button class="text-black text-xl"><i class="fas fa-bell"></i></button>
+            <button class="text-black text-xl"><i class="fas fa-comment-alt"></i></button>
+            <button class="text-black text-xl mt-auto"><i class="fas fa-cog"></i></button>
+        </nav>
+
+        <main class="flex-1 flex flex-col">
+            <!-- Top bar -->
+            <header class="flex items-center justify-between px-6 py-3 border-b border-gray-200">
+                <form class="flex items-center flex-1 max-w-4xl mx-auto">
+                    <div class="relative w-full">
+                        <input class="w-full rounded-full border border-gray-100 bg-gray-100 py-2 pl-12 pr-4" placeholder="Cari" type="search"/>
+                        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"><i class="fas fa-search"></i></span>
+                    </div>
+                </form>
+                <button class="ml-6 w-9 h-9 rounded-full bg-red-400 text-white flex items-center justify-center">c</button>
+            </header>
+
+            <!-- Image Grid (Foto diganti sesuai folder img/) -->
+            <section class="p-6 overflow-y-auto flex-1">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/chamu hee.jpg" alt="Chamu Hee">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/ggyj.jpg" alt="Image 2">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyj.jpg" alt="Image 3">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyjj.jpg" alt="Image 4">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyjjj.jpg" alt="Image 5">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyjjjt.jpg" alt="Image 6">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyjjt.jpg" alt="Image 7">
+                    <img class="rounded-xl object-cover w-full h-[400px] cursor-pointer" src="img/gyyjj.jpg" alt="Image 8">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 hidden">
+        <div class="relative max-w-[90vw] max-h-[90vh]">
+            <button id="modalClose" class="absolute top-2 right-2 text-white text-3xl">&times;</button>
+            <img id="modalImage" src="" class="max-w-full max-h-[80vh] rounded-lg"/>
+            <a id="modalDownload" href="#" download class="absolute bottom-2 right-2 bg-red-600 text-white px-4 py-2 rounded">
+                <i class="fas fa-download"></i><span>Download</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Panggil JS Eksternal -->
+    <script src="pinterst.js"></script>
+</body>
+</html>
